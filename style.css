@@ -312,7 +312,7 @@ main {
  #about .about-col .info-col .icon-list-col .icon-list ul li span {
     color:#040b14;
     font-weight:500;
-    font-size: 13px;
+    font-size: 14px;
  }
 
  @media only screen and (max-width: 430px) {

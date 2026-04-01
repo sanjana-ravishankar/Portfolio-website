@@ -962,13 +962,13 @@ main {
 
 
 #typed-text {
-    color: #FFFDD0; /* Your teal theme color */
+    color: white; 
     font-weight: 600;
 }
 
-/* This styles the blinking cursor "|" */
+
 .typed-cursor {
-    color: #FFFDD0;
+    color: white;
     font-size: 30px;
     opacity: 1;
     animation: blink 0.7s infinite;

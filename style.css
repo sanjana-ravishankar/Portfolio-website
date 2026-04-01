@@ -929,37 +929,25 @@ main {
     cursor:pointer;
  }
 
- @media only screen and (max-width: 800px) {
+@media only screen and (max-width: 800px) {
     #contact {
-        padding: 50px;
-    }
+        padding:50px;
+     }
     
-    #contact .contact-row {
-        flex-direction: column;
-        gap: 10px;
-    }
-}
+     #contact .contact-row {
+        flex-direction:column;
+        gap:11px;
+      
+     }
+ }
 
-@media only screen and (max-width: 500px) {
+ @media only screen and (max-width: 500px) {
     #contact {
-        padding: 10px;
-    }
-
-    #contact .contact-row {
-        flex-direction: row; /* Keep icon and text side-by-side */
-        align-items: center;
-        justify-content: flex-start;
-        white-space: nowrap; /* Forces everything to stay on ONE line */
-        gap: 8px; /* Tightens the space between icon and text */
-    }
-
-    /* Shrink the font specifically for the email and label */
-    #contact .contact-row h4, 
-    #contact .contact-row p,
-    #contact .contact-row span {
-        font-size: 13px; /* Adjust this number until it fits perfectly */
-    }
-}
+        padding:14px;
+     }
+    
+    
+ }
 
 .mobile-nav-active header {
     left: 0;

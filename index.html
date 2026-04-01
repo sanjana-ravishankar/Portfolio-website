@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width", initial-scale="1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
 
 
@@ -412,7 +412,18 @@
             </section>
         </main>
 
-        
+        <script>
+        let MenuBtn = document.getElementById('MenuBtn');
+
+        MenuBtn.addEventListener('click', function(e) {
+            // Toggles a class on the body tag
+            document.querySelector('body').classList.toggle('mobile-nav-active');
+            
+            // Optional: Changes the icon from 'bars' to 'X'
+            this.classList.toggle('fa-bars');
+            this.classList.toggle('fa-xmark');
+        });
+    </script>
 
         <script src="./typed.js-master/lib/typed.min.js"></script>
         <script src=

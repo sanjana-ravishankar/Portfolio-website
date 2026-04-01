@@ -963,7 +963,12 @@ main {
         margin-left: 0;
     }
 }
-
+#skill, 
+#portfolio, 
+#contact {
+    background-color: #FFF0F5; /* This is a bright "Lavender Blush" pink */
+    padding: 70px 30px;        /* Keeps your spacing consistent */
+}
 
 #typed-text {
     color: white; 

@@ -959,3 +959,34 @@ main {
         margin-left: 0;
     }
 }
+
+
+#typed-text {
+    color: #00A78E; /* Your teal theme color */
+    font-weight: 600;
+}
+
+/* This styles the blinking cursor "|" */
+.typed-cursor {
+    color: #00A78E;
+    font-size: 30px;
+    opacity: 1;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Mobile fix for your Vivo Y75 */
+@media only screen and (max-width: 430px) {
+    #typed-text {
+        font-size: 22px; 
+    }
+    .typed-cursor {
+        font-size: 22px;
+    }
+}
+

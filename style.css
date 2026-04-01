@@ -931,23 +931,36 @@ main {
 
  @media only screen and (max-width: 800px) {
     #contact {
-        padding:50px;
-     }
+        padding: 50px;
+    }
     
-     #contact .contact-row {
-        flex-direction:column;
-        gap:10px;
-      
-     }
- }
+    #contact .contact-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
 
- @media only screen and (max-width: 500px) {
+@media only screen and (max-width: 500px) {
     #contact {
-        padding:10px;
-     }
-    
-    
- }
+        padding: 10px;
+    }
+
+    #contact .contact-row {
+        /* This prevents the long email from stretching the row */
+        word-break: break-all; 
+        text-align: center; /* Optional: aligns text better in column mode */
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Target the specific email text element if it has a tag (like <p> or <span>) */
+    #contact .contact-row span, 
+    #contact .contact-row p {
+        font-size: 14px; /* Slightly smaller font helps fit longer emails */
+        max-width: 100%;
+    }
+}
+
 .mobile-nav-active header {
     left: 0;
 }

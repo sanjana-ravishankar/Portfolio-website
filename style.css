@@ -25,7 +25,7 @@ header {
     background-color: #040b14;
     overflow-y: auto;
     position:fixed;
-    left:0;
+    left:-300px;
     top:0;
     bottom:0;
     transition:0.4s;
@@ -114,7 +114,7 @@ header .footer {
     padding:15px;
     position: fixed;
     border:0;
-    left:0;
+    left:-300px;
     transition:0.4s;
 
 }
@@ -169,7 +169,7 @@ header .footer {
 }
 
 main {
-    margin-left:300px;
+    margin-left:0;
     background-color:#f6a8a867;
     transition: 0.3s;
 }
@@ -931,3 +931,22 @@ main {
     
     
  }
+.mobile-nav-active header {
+    left: 0;
+}
+
+.mobile-nav-active header .footer {
+    left: 0;
+}
+
+/* Optional: Pushes the main content to the right when menu opens */
+.mobile-nav-active main {
+    margin-left: 300px;
+}
+
+/* Responsive fix: on small phones, don't push the main content */
+@media only screen and (max-width: 600px) {
+    .mobile-nav-active main {
+        margin-left: 0;
+    }
+}

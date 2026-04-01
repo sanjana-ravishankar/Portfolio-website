@@ -118,8 +118,24 @@ header .footer {
     transition:0.4s;
 
 }
-
 #MenuBtn {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    color: white;
+    background-color: #00A78E;
+    text-align: center;
+    line-height: 42px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0,0,0,20%);
+    display: block; /* <--- This makes it visible on your laptop */
+    z-index: 999;
+}
+
+/* #MenuBtn {
     position:fixed;
     top:25px;
     right:25px;
@@ -134,7 +150,7 @@ header .footer {
     box-shadow: 0 0 20px rgba(0,0,0,20%);
     display: none;
     z-index: 999;
-}
+}  */
 
 @media only screen and (max-width: 1050px) {
     header {

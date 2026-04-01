@@ -37,7 +37,7 @@
             <section id="home">
                 <div class="home-row">
                     <h1>Hi, this is <br>Sanjana<span></span></h1>
-                    <p>I am a <span class = "auto-input">Programmer, Web developer, Blockchain Patent Inventor, AI, Cyber Security & Cloud enthusiast!</span></p>
+                    <p>I am a <span id="typed-text"></span></p>
                 </div>
             </section>
             <section id="about">
@@ -411,7 +411,25 @@
                     </div>
             </section>
         </main>
+<!-- 1. Load the Typed.js Library -->
+<script src="https://unpkg.com"></script>
 
+<!-- 2. Configure the typing effect -->
+<script>
+  var typed = new Typed('#typed-text', {
+    strings: [
+        'Programmer', 
+        'Web Developer', 
+        'Blockchain Patent Inventor', 
+        'AI & Cloud Enthusiast', 
+        'Cyber Security Enthusiast'
+    ],
+    typeSpeed: 70,    /* Speed of typing */
+    backSpeed: 40,    /* Speed of deleting */
+    backDelay: 2000,  /* How long it stays typed before deleting */
+    loop: true        /* Keep repeating forever */
+  });
+</script>
         <script>
         let MenuBtn = document.getElementById('MenuBtn');
 
@@ -425,11 +443,6 @@
         });
     </script>
 
-        <script src="./typed.js-master/lib/typed.min.js"></script>
-        <script src=
-"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
-    </script>
-        <script src="script.js"></script>
-        <script src="https://kit.fontawesome.com/aa5f332820.js" crossorigin="anonymous"></script>
+    
     </body>
 </html>

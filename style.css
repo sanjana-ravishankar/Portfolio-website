@@ -173,13 +173,13 @@ header .footer {
 }
 
 main {
-    margin-left:0;
-    background-color:white;
-    transition: 0.4s; /* Match this to your header transition speed */
-    
-  
-    width: 100%;
+   margin-left: 0;
+    width: 100%; /* Take up the full screen initially */
+    min-height: 100vh;
+    background-color: #ffffff;
+    transition: all 0.4s ease-in-out; /* Smoothly animate all changes */
     overflow-x: hidden; 
+    position: relative;
 }
 
 @media only screen and (max-width: 1050px) {
@@ -959,12 +959,14 @@ main {
 /* Optional: Pushes the main content to the right when menu opens */
 .mobile-nav-active main {
     margin-left: 300px;
+    width: calc(100% - 300px);
 }
 
 /* Responsive fix: on small phones, don't push the main content */
 @media only screen and (max-width: 600px) {
     .mobile-nav-active main {
         margin-left: 0;
+        width: 100%;
     }
 }
 #skill, 

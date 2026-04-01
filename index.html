@@ -4,8 +4,8 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         <link rel="stylesheet" href="style.css">
-
 
         <title>Personal Portfolio Website</title>
     </head>
@@ -423,17 +423,22 @@
   });
 </script>
         <script>
-        let MenuBtn = document.getElementById('MenuBtn');
+    const menuBtn = document.getElementById('MenuBtn');
+    const body = document.querySelector('body');
 
-        MenuBtn.addEventListener('click', function(e) {
-            // Toggles a class on the body tag
-            document.querySelector('body').classList.toggle('mobile-nav-active');
-            
-            // Optional: Changes the icon from 'bars' to 'X'
-            this.classList.toggle('fa-bars');
-            this.classList.toggle('fa-xmark');
-        });
-    </script>
+    menuBtn.addEventListener('click', function() {
+        // 1. This opens/closes the sidebar menu
+        body.classList.toggle('mobile-nav-active');
+        
+        // 2. This swaps the '3 lines' for an 'X'
+        if (this.classList.contains('fa-bars')) {
+            this.classList.replace('fa-bars', 'fa-xmark');
+        } else {
+            // 3. This swaps the 'X' back to '3 lines'
+            this.classList.replace('fa-xmark', 'fa-bars');
+        }
+    });
+</script>
 
     
     </body>

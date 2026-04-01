@@ -174,7 +174,7 @@ header .footer {
 
 main {
     margin-left:0;
-    background-color:#f6a8a867;
+    background-color:white;
     transition: 0.3s;
 }
 
@@ -185,25 +185,29 @@ main {
 }
 
 #home{
-    height:100vh;
-    width:100%;
+    position: relative;
+    height: 100vh;
+    width: 100%;
     background-image: url(portfolio-bg.jpeg);
     background-size: cover;
     background-attachment: fixed;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding:70px;
+    padding: 70px;
+    z-index: 1;
+    
 }
 
 #home::before {
     content: '';
     width:100%;
     height:100%;
-    background-color: rgba(0, 0, 0, 0.349);
+    background-color: rgba(0, 0, 0, 0.1);
     position:absolute;
     top:0;
     left:0;
+    z-index: -1; 
 }
 
 #home .home-row {

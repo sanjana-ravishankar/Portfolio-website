@@ -795,11 +795,12 @@ main {
     background-color: #040b14;
 }
 
-/* --- NEW ISOLATED STYLES (Only applies to your 1st AI icon card) --- */
 #service .service-row .service-box .icon.ai-icon .fa-layers {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+    width: 50px !important;
+    max-width: 50px;
+    height: 50px !important;
+    max-height: 50px;
+    border-radius: 50% !important;
     border: 2px solid #00A78E;
     background-color: #00A78E;
     color: #040b14;
@@ -807,9 +808,11 @@ main {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden; /* This completely clips the square corners */
+    box-sizing: border-box;
 }
 
-/* Sizing and coloring the SVG layers inside the AI circle */
+
 #service .service-row .service-box .icon.ai-icon .fa-layers svg,
 #service .service-row .service-box .icon.ai-icon .fa-layers i {
     font-size: 22px;

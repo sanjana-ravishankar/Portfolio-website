@@ -834,6 +834,7 @@ main {
     background: transparent !important;
     background-color: transparent !important;
     border: none !important;
+    transition: none !important; 
 }
 
 #service .service-row .service-box:hover .icon.ai-icon .fa-layers .fa-sliders {

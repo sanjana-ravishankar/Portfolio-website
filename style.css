@@ -822,7 +822,6 @@ main {
     fill: #040b14;
 }
 
-/* --- REPLACED HOVER SECTION (Fixes the ghost curves) --- */
 #service .service-row .service-box:hover .icon.ai-icon .fa-layers {
     color: #00A78E;
     background-color: #040b14;
@@ -834,6 +833,7 @@ main {
     background: transparent !important;
     background-color: transparent !important;
     border: none !important;
+    /* FIX: Kills the 0.7s animation delay on hidden sub-elements instantly */
     transition: none !important; 
 }
 
@@ -841,6 +841,8 @@ main {
     color: #00A78E;
     fill: #00A78E;
 }
+
+
 
 
 

@@ -776,7 +776,7 @@ main {
     gap: 20px;
 }
 
-/* --- YOUR ORIGINAL STYLES (Keeps icons 2 through 6 completely unchanged) --- */
+
 #service .service-row .service-box .icon i {
     width: 50px;
     height: 50px;
@@ -827,9 +827,9 @@ main {
     background-color: #040b14;
 }
 
-#service .service-row .service-box:hover .icon.ai-icon .fa-layers *,
-#service .service-row .service-box:hover .icon.ai-icon .fa-layers svg,
-#service .service-row .service-box:hover .icon.ai-icon .fa-layers i {
+#service .service-row .service-box .icon.ai-icon .fa-layers *,
+#service .service-row .service-box .icon.ai-icon .fa-layers svg,
+#service .service-row .service-box .icon.ai-icon .fa-layers i {
     background: transparent !important;
     background-color: transparent !important;
     border: none !important;

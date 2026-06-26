@@ -808,11 +808,11 @@ main {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden; /* This completely clips the square corners */
+    overflow: hidden;
     box-sizing: border-box;
 }
 
-
+/* Sizing and coloring the SVG layers inside the AI circle */
 #service .service-row .service-box .icon.ai-icon .fa-layers svg,
 #service .service-row .service-box .icon.ai-icon .fa-layers i {
     font-size: 22px;
@@ -822,15 +822,25 @@ main {
     fill: #040b14;
 }
 
-/* Hover effects restricted to the AI card */
+/* --- REPLACED HOVER SECTION (Fixes the ghost curves) --- */
 #service .service-row .service-box:hover .icon.ai-icon .fa-layers {
     color: #00A78E;
     background-color: #040b14;
 }
+
+#service .service-row .service-box:hover .icon.ai-icon .fa-layers *,
+#service .service-row .service-box:hover .icon.ai-icon .fa-layers svg,
+#service .service-row .service-box:hover .icon.ai-icon .fa-layers i {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+}
+
 #service .service-row .service-box:hover .icon.ai-icon .fa-layers .fa-sliders {
     color: #00A78E;
     fill: #00A78E;
 }
+
 
 
 

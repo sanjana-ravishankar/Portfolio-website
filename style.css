@@ -764,37 +764,39 @@ main {
     padding: 70px 30px;
     background-color: white;
  }
- #service .service-row {
-    margin-top:50px;
-    display:grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-gap:30px;
- }
+#service .service-row {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
 
- #service .service-row .service-box {
+#service .service-row .service-box {
     display: flex;
-    gap:20px;
- }
+    gap: 20px;
+}
 
- #service .service-row .service-box .icon i {
-    width:50px;
-    height:50px;
+/* --- YOUR ORIGINAL STYLES (Keeps icons 2 through 6 completely unchanged) --- */
+#service .service-row .service-box .icon i {
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     border: 2px solid #00A78E;
     font-size: 22px;
     line-height: 46px;
     background-color: #00A78E;
-    color:#040b14;
+    color: #040b14;
     transition: 0.7s;
     text-align: center;
+}
 
- }
- #service .service-row .service-box:hover .icon i {
-    color:#00A78E;
+#service .service-row .service-box:hover .icon i {
+    color: #00A78E;
     background-color: #040b14;
- }
-/* Target the layered container instead of a single <i> */
-#service .service-row .service-box .icon .fa-layers {
+}
+
+/* --- NEW ISOLATED STYLES (Only applies to your 1st AI icon card) --- */
+#service .service-row .service-box .icon.ai-icon .fa-layers {
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -807,23 +809,31 @@ main {
     justify-content: center;
 }
 
-/* Individual icon colors inside the layer */
-#service .service-row .service-box .icon .fa-layers .fa-robot {
+/* Sizing and coloring the SVG layers inside the AI circle */
+#service .service-row .service-box .icon.ai-icon .fa-layers svg,
+#service .service-row .service-box .icon.ai-icon .fa-layers i {
     font-size: 22px;
 }
-#service .service-row .service-box .icon .fa-layers .fa-sliders {
-    color: #040b14; /* Matches the robot color */
+#service .service-row .service-box .icon.ai-icon .fa-layers .fa-sliders {
+    color: #040b14;
+    fill: #040b14;
 }
 
-/* Hover effects for the layered block */
-#service .service-row .service-box:hover .icon .fa-layers {
+/* Hover effects restricted to the AI card */
+#service .service-row .service-box:hover .icon.ai-icon .fa-layers {
     color: #00A78E;
     background-color: #040b14;
 }
-
-#service .service-row .service-box:hover .icon .fa-layers .fa-sliders {
-    color: #00A78E; /* Keeps the sliders matching the robot on hover */
+#service .service-row .service-box:hover .icon.ai-icon .fa-layers .fa-sliders {
+    color: #00A78E;
+    fill: #00A78E;
 }
+
+
+
+
+
+
 
  #service .service-row .service-box .ser-info h4 {
     color:#2c2f3f;

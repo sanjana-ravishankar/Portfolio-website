@@ -575,18 +575,20 @@ main {
 
 #resume .resume-row .resume-cols .my-edu {
     padding: 0 20px 0 20px;
-    /* 1. Removed border-left from here */
     position: relative;
 }
 
-
+/* Updated line configuration */
 #resume .resume-row .resume-cols .my-edu::after {
     content: '';
     position: absolute;
     left: 0;
-    top: 5px;       /* Starts slightly lower to align nicely with the circle */
-    bottom: 25px;   /* 👈 CHANGE THIS VALUE to pull the bottom of the line up and match your text */
+    top: 10px;          /* Starts right at the center of the top circle */
+    
+    
+    height: 82%;       /* Forces the line to stop well before the bottom of the container */
     width: 2px;
+    
     background-color: #00A78E;
 }
 
@@ -594,14 +596,18 @@ main {
     content: '';
     position: absolute;
     top: 0px;
-    left: -7px;     /* Adjusted slightly to center perfectly over the new 2px line */
+    left: -7px;     
     width: 15px;
-    height: 15px;    /* Made it a perfect circle */
+    height: 15px;    
     border-radius: 50%;
     border: 2px solid #00A78E;
     background-color: rgba(245, 204, 204, 0.93);
-    z-index: 1;     /* Sits nicely on top of the line */
+    z-index: 1;     
 }
+
+
+
+
 
 
  #resume .resume-row .resume-cols .sp-box {

@@ -573,25 +573,36 @@ main {
     font-weight:500;
  }
 
- #resume .resume-row .resume-cols .my-edu {
-    padding:0 20px 0 20px;
-    border-left: 2px solid #00A78E;
+#resume .resume-row .resume-cols .my-edu {
+    padding: 0 20px 0 20px;
+    /* 1. Removed border-left from here */
     position: relative;
+}
 
- }
 
- #resume .resume-row .resume-cols .my-edu::before {
-    content:'';
+#resume .resume-row .resume-cols .my-edu::after {
+    content: '';
     position: absolute;
-    top:0px;
-    left:-10px;
-    width:15px;
-    height:10px;
-    border-radius:50%;
-    border:2px solid #00A78E;
-    background-color: rgba(245, 204, 204, 0.93);
+    left: 0;
+    top: 5px;       /* Starts slightly lower to align nicely with the circle */
+    bottom: 25px;   /* 👈 CHANGE THIS VALUE to pull the bottom of the line up and match your text */
+    width: 2px;
+    background-color: #00A78E;
+}
 
- }
+#resume .resume-row .resume-cols .my-edu::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: -7px;     /* Adjusted slightly to center perfectly over the new 2px line */
+    width: 15px;
+    height: 15px;    /* Made it a perfect circle */
+    border-radius: 50%;
+    border: 2px solid #00A78E;
+    background-color: rgba(245, 204, 204, 0.93);
+    z-index: 1;     /* Sits nicely on top of the line */
+}
+
 
  #resume .resume-row .resume-cols .sp-box {
     padding:4px 22px;

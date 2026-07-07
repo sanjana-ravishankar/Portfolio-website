@@ -573,29 +573,31 @@ main {
     font-weight:500;
  }
 
+/* 1. Clear any border or line rules from the main container */
 #resume .resume-row .resume-cols .my-edu {
-    padding: 0 20px 0 20px;
+    padding: 0 0 0 25px; /* Added left padding to create clean spacing for the text */
     position: relative;
 }
 
-/* Updated line configuration */
-#resume .resume-row .resume-cols .my-edu::after {
+/* 2. Create the timeline stick using the h3 element */
+#resume .resume-row .resume-cols .my-edu h3::after {
     content: '';
     position: absolute;
     left: 0;
-    top: 10px;          /* Starts right at the center of the top circle */
+    top: 10px;          /* Starts perfectly inside the circle */
     
     
-    height: 82%;       /* Forces the line to stop well before the bottom of the container */
+    height: calc(100% - 35px); 
     width: 2px;
-    
     background-color: #00A78E;
+    z-index: 0;
 }
 
-#resume .resume-row .resume-cols .my-edu::before {
+/* 3. Place the node circle on the h3 element */
+#resume .resume-row .resume-cols .my-edu h3::before {
     content: '';
     position: absolute;
-    top: 0px;
+    top: 3px;           /* Vertically aligns the circle to the center of your h3 text line */
     left: -7px;     
     width: 15px;
     height: 15px;    
@@ -605,9 +607,11 @@ main {
     z-index: 1;     
 }
 
-
-
-
+/* 4. Structural Clean-up: Normalize default paragraph margins so they don't break layouts */
+#resume .resume-row .resume-cols .my-edu p {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
 
 
  #resume .resume-row .resume-cols .sp-box {
